@@ -11,6 +11,7 @@ navbar-links:
   Play: "play"
   News: "news"
   Posts: "posts"
+  Support: "support"
   Privacy: "privacy"
 
 avatar: "/assets/img/tapme-icon.png"
