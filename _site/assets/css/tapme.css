@@ -1,13 +1,15 @@
 :root {
-  --tapme-bg: #ffffff;
-  --tapme-ink: #182235;
-  --tapme-muted: #5e6b80;
-  --tapme-soft: #f3f7fc;
-  --tapme-line: #dce6f2;
-  --tapme-blue: #1b6ef3;
-  --tapme-blue-dark: #124eb4;
-  --tapme-green: #18a46f;
-  --tapme-shadow: 0 24px 70px rgba(20, 34, 58, 0.16);
+  --tapme-bg: #fbfcff;
+  --tapme-ink: #141926;
+  --tapme-muted: #5f6978;
+  --tapme-soft: #eef5f2;
+  --tapme-panel: #ffffff;
+  --tapme-line: #d8e0ea;
+  --tapme-blue: #1768e8;
+  --tapme-blue-dark: #0e4fb5;
+  --tapme-green: #1f9d68;
+  --tapme-yellow: #f6bd3b;
+  --tapme-shadow: 0 20px 60px rgba(20, 25, 38, 0.13);
 }
 
 html {
@@ -15,6 +17,9 @@ html {
 }
 
 body {
+  margin: 0;
+  color: var(--tapme-ink);
+  background: var(--tapme-bg);
   letter-spacing: 0;
 }
 
@@ -24,37 +29,85 @@ body {
   padding: 0 24px;
 }
 
+.tapme-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(251, 252, 255, 0.94);
+  border-bottom: 1px solid rgba(216, 224, 234, 0.82);
+  backdrop-filter: blur(16px);
+}
+
+.tapme-nav__inner {
+  max-width: 1180px;
+  min-height: 64px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.tapme-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--tapme-ink);
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.tapme-brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+}
+
+.tapme-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.tapme-nav__links a {
+  color: #2d3748;
+  font-weight: 750;
+  text-decoration: none;
+}
+
 .tapme-hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(360px, 1.14fr);
-  gap: 56px;
+  grid-template-columns: minmax(0, 0.84fr) minmax(420px, 1.16fr);
+  gap: 48px;
   align-items: center;
-  padding: 54px 24px 32px;
+  min-height: calc(100vh - 64px);
+  padding: 44px 24px 70px;
 }
 
-.tapme-hero__copy {
-  max-width: 610px;
-}
-
-.tapme-hero__icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 18px;
-  box-shadow: 0 14px 36px rgba(27, 110, 243, 0.18);
+.tapme-eyebrow {
+  margin: 0 0 16px;
+  color: var(--tapme-green);
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .tapme-hero h1 {
-  margin: 24px 0 16px;
-  font-size: clamp(42px, 6vw, 74px);
-  line-height: 0.98;
-  letter-spacing: 0;
+  margin: 0;
+  max-width: 680px;
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: 0.96;
   color: var(--tapme-ink);
 }
 
 .tapme-hero .lead {
-  max-width: 590px;
-  font-size: 21px;
-  line-height: 1.55;
+  max-width: 610px;
+  margin: 22px 0 0;
+  font-size: 20px;
+  line-height: 1.58;
   color: var(--tapme-muted);
 }
 
@@ -62,19 +115,19 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin: 28px 0 14px;
+  margin: 30px 0 14px;
 }
 
 .tapme-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  padding: 0 19px;
-  border: 1px solid #b7c7dd;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid #b8c5d6;
   border-radius: 8px;
-  color: #174f9f;
-  font-weight: 750;
+  color: #16519f;
+  font-weight: 820;
   text-decoration: none;
   background: #fff;
 }
@@ -82,14 +135,14 @@ body {
 .tapme-button:hover {
   color: var(--tapme-blue-dark);
   text-decoration: none;
-  border-color: #8fb1e8;
+  border-color: #91afe0;
 }
 
 .tapme-button--primary {
   border-color: var(--tapme-blue);
   background: var(--tapme-blue);
   color: #fff;
-  box-shadow: 0 10px 26px rgba(27, 110, 243, 0.22);
+  box-shadow: 0 12px 28px rgba(23, 104, 232, 0.24);
 }
 
 .tapme-button--primary:hover {
@@ -98,32 +151,104 @@ body {
 }
 
 .tapme-note {
-  max-width: 620px;
-  color: #6d788b;
+  max-width: 610px;
+  color: #697486;
   font-size: 14px;
 }
 
-.tapme-hero__media {
-  padding: 16px;
-  background: linear-gradient(180deg, #f7fbff 0%, #eef5ff 100%);
-  border: 1px solid var(--tapme-line);
-  border-radius: 10px;
+.tapme-hero__showcase {
+  position: relative;
+  min-height: 610px;
+}
+
+.tapme-poster-stack {
+  position: relative;
+  height: min(74vh, 720px);
+  min-height: 570px;
+}
+
+.tapme-poster {
+  position: absolute;
+  width: min(33vw, 285px);
+  max-width: 43%;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  background: #fff;
   box-shadow: var(--tapme-shadow);
 }
 
-.tapme-hero__media img,
-.tapme-screens img,
-.tapme-media img {
+.tapme-poster img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 21px;
+}
+
+.tapme-poster--main {
+  z-index: 3;
+  left: 31%;
+  top: 1%;
+  width: min(36vw, 322px);
+  max-width: 52%;
+}
+
+.tapme-poster--left {
+  z-index: 2;
+  left: 3%;
+  top: 12%;
+  transform: rotate(-5deg);
+}
+
+.tapme-poster--right {
+  z-index: 1;
+  right: 1%;
+  top: 18%;
+  transform: rotate(5deg);
+}
+
+.tapme-poster--small {
+  z-index: 4;
+  right: 13%;
+  bottom: 1%;
+  width: min(24vw, 210px);
+  transform: rotate(-2deg);
+}
+
+.tapme-metric-strip {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 42px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.tapme-metric {
+  padding: 14px 16px;
+  border: 1px solid rgba(216, 224, 234, 0.9);
   border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 30px rgba(20, 25, 38, 0.09);
+}
+
+.tapme-metric strong {
+  display: block;
+  font-size: 20px;
+}
+
+.tapme-metric span {
+  color: var(--tapme-muted);
+  font-size: 13px;
 }
 
 .tapme-section {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 56px 24px;
+  padding: 62px 24px;
 }
 
 .tapme-section--soft {
@@ -139,10 +264,9 @@ body {
 }
 
 .tapme-section h2 {
-  margin-top: 0;
-  margin-bottom: 14px;
-  font-size: clamp(28px, 4vw, 42px);
-  line-height: 1.12;
+  margin: 0 0 14px;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.08;
   color: var(--tapme-ink);
 }
 
@@ -150,83 +274,95 @@ body {
   color: var(--tapme-muted);
 }
 
+.tapme-feature-row {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: 38px;
+  align-items: center;
+}
+
+.tapme-poster-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  align-items: end;
+}
+
+.tapme-poster-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 12px 34px rgba(20, 25, 38, 0.14);
+}
+
 .tapme-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 
 .tapme-card {
   border: 1px solid var(--tapme-line);
   border-radius: 8px;
   padding: 24px;
-  background: #fff;
+  background: var(--tapme-panel);
 }
 
-.tapme-card h3,
-.tapme-card h2 {
+.tapme-card h2,
+.tapme-card h3 {
   margin-top: 0;
   color: var(--tapme-ink);
 }
 
 .tapme-steps {
-  counter-reset: tapme-step;
   display: grid;
-  gap: 14px;
-  margin: 28px 0 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 26px;
 }
 
 .tapme-step {
-  counter-increment: tapme-step;
-  display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
-  gap: 16px;
-  align-items: start;
-  padding: 18px;
+  min-height: 190px;
+  padding: 24px;
   border: 1px solid var(--tapme-line);
   border-radius: 8px;
   background: #fff;
 }
 
-.tapme-step::before {
-  content: counter(tapme-step);
+.tapme-step__num {
+  display: inline-flex;
   width: 36px;
   height: 36px;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 18px;
   border-radius: 50%;
   color: #fff;
   background: var(--tapme-blue);
-  font-weight: 800;
+  font-weight: 900;
 }
 
-.tapme-step h3 {
-  margin: 0 0 6px;
-}
-
-.tapme-screens {
+.tapme-split {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-  gap: 40px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+  gap: 36px;
   align-items: center;
 }
 
-.tapme-game-frame {
-  width: min(430px, 100%);
-  aspect-ratio: 390 / 844;
-  margin: 26px auto 0;
-  border: 1px solid #cbd8e8;
+.tapme-play-panel {
+  padding: 28px;
+  border: 1px solid var(--tapme-line);
   border-radius: 8px;
-  overflow: hidden;
-  background: #101828;
-  box-shadow: var(--tapme-shadow);
+  background: #fff;
+  box-shadow: 0 14px 40px rgba(20, 25, 38, 0.08);
 }
 
-.tapme-game-frame iframe {
+.tapme-play-panel img {
   width: 100%;
-  height: 100%;
-  border: 0;
+  height: auto;
+  display: block;
+  border-radius: 12px;
 }
 
 .tapme-footer-links {
@@ -245,7 +381,7 @@ body {
 }
 
 .tapme-link-list a {
-  font-weight: 700;
+  font-weight: 750;
 }
 
 .tapme-meta {
@@ -253,20 +389,94 @@ body {
   font-size: 14px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .tapme-hero,
-  .tapme-screens,
-  .tapme-grid {
+  .tapme-feature-row,
+  .tapme-split,
+  .tapme-grid,
+  .tapme-steps {
     grid-template-columns: 1fr;
   }
 
   .tapme-hero {
-    gap: 32px;
-    padding-top: 28px;
+    min-height: auto;
+    gap: 24px;
+    padding-top: 34px;
   }
 
-  .tapme-hero__media {
-    padding: 10px;
+  .tapme-hero__showcase {
+    min-height: 520px;
+  }
+
+  .tapme-poster-stack {
+    height: 520px;
+    min-height: 520px;
+  }
+
+  .tapme-poster {
+    width: 38%;
+    max-width: 38%;
+  }
+
+  .tapme-poster--main {
+    left: 30%;
+    width: 43%;
+    max-width: 43%;
+  }
+
+  .tapme-metric-strip {
+    bottom: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .tapme-nav__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 12px 18px;
+  }
+
+  .tapme-nav__links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .tapme-shell,
+  .tapme-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .tapme-hero h1 {
+    font-size: 48px;
+  }
+
+  .tapme-hero .lead {
+    font-size: 18px;
+  }
+
+  .tapme-hero__showcase {
+    min-height: 430px;
+  }
+
+  .tapme-poster-stack {
+    height: 430px;
+    min-height: 430px;
+  }
+
+  .tapme-poster--small {
+    display: none;
+  }
+
+  .tapme-metric-strip {
+    grid-template-columns: 1fr;
+    max-width: 230px;
+    right: auto;
+    left: 0;
+  }
+
+  .tapme-poster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .tapme-link-list {

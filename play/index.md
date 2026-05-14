@@ -1,15 +1,13 @@
 ---
 layout: page
 title: Play TapMe.plus
-subtitle: Launch the web version.
+subtitle: Open the dedicated web game.
 ---
 
-The fastest way to play is the full-screen web build:
+The official web game runs on a separate page so the main website can stay fast.
 
-[Play at web.tapme.plus](https://web.tapme.plus){: .btn .btn-primary}
+[Open Web Game](https://web.tapme.plus){: .btn .btn-primary target="_blank" rel="noopener"}
 
-The web build downloads the Godot runtime and game package on first launch. Later visits are usually cached by your browser.
+The web build downloads the Godot runtime and game package after you open it. The first launch can be slower than a normal web page; later visits are usually cached by your browser.
 
-<div class="tapme-game-frame">
-  <iframe src="https://web.tapme.plus" title="TapMe.plus web game" loading="lazy" allow="fullscreen"></iframe>
-</div>
+For loading help, visit [Technical Support](/support/).

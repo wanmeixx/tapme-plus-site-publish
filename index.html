@@ -7,97 +7,88 @@ full-width: true
 
 <section class="tapme-hero tapme-shell">
   <div class="tapme-hero__copy">
-    <img class="tapme-hero__icon" src="/assets/img/tapme-icon.png" alt="TapMe.plus app icon">
+    <p class="tapme-eyebrow">Number puzzle for iPhone, iPad, and web</p>
     <h1>TapMe.plus</h1>
-    <p class="lead">A polished number merge puzzle for short portrait sessions: tap to add 1, connect matching numbers, and build chain reactions without losing the clean one-thumb flow.</p>
+    <p class="lead">Tap a tile, raise its number, merge connected matches, and let the board chain into the next move. Built for clean portrait play, quick sessions, and readable high-score runs.</p>
     <div class="tapme-actions">
-      <a class="tapme-button tapme-button--primary" href="https://web.tapme.plus">Play Web Version</a>
-      <a class="tapme-button" href="/posts/tapme-plus-gameplay-guide/">Read Gameplay Guide</a>
+      <a class="tapme-button tapme-button--primary" href="https://web.tapme.plus" target="_blank" rel="noopener">Play Now</a>
+      <a class="tapme-button" href="/posts/tapme-plus-gameplay-guide/">Gameplay Guide</a>
     </div>
-    <p class="tapme-note">The official web build is available now. The iPhone and iPad release is prepared around privacy-first local play and optional Apple Game Center leaderboards.</p>
+    <p class="tapme-note">The homepage stays lightweight. The Godot web build only loads after you open the dedicated play page.</p>
   </div>
-  <div class="tapme-hero__media">
-    <img src="/assets/img/tapme-ipad.png" alt="TapMe.plus iPad gameplay preview">
+  <div class="tapme-hero__showcase" aria-label="TapMe.plus App Store preview posters">
+    <div class="tapme-poster-stack">
+      <figure class="tapme-poster tapme-poster--left"><img src="/assets/img/posters/poster-02.jpg" alt="TapMe.plus merge gameplay poster"></figure>
+      <figure class="tapme-poster tapme-poster--main"><img src="/assets/img/posters/poster-01.jpg" alt="TapMe.plus tap plus one App Store poster"></figure>
+      <figure class="tapme-poster tapme-poster--right"><img src="/assets/img/posters/poster-03.jpg" alt="TapMe.plus game modes poster"></figure>
+      <figure class="tapme-poster tapme-poster--small"><img src="/assets/img/posters/poster-05.jpg" alt="TapMe.plus high score poster"></figure>
+      <div class="tapme-metric-strip">
+        <div class="tapme-metric"><strong>Tap +1</strong><span>One clear move</span></div>
+        <div class="tapme-metric"><strong>3+ merge</strong><span>Connected matches</span></div>
+        <div class="tapme-metric"><strong>Chains</strong><span>Board reactions</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tapme-section tapme-section--soft">
+  <div class="tapme-section__inner tapme-feature-row">
+    <div>
+      <p class="tapme-eyebrow">App Store preview set</p>
+      <h2>Real launch artwork, not placeholder screenshots.</h2>
+      <p>The official site now uses the same Image2 poster direction prepared for App Store submission. The visual language matches the product page players will see before installing or opening the web build.</p>
+    </div>
+    <div class="tapme-poster-grid" aria-label="TapMe.plus App Store posters">
+      <img src="/assets/img/posters/poster-01.jpg" alt="Tap +1 poster">
+      <img src="/assets/img/posters/poster-02.jpg" alt="Merge numbers poster">
+      <img src="/assets/img/posters/poster-03.jpg" alt="Game modes poster">
+      <img src="/assets/img/posters/poster-04.jpg" alt="Rush mode poster">
+      <img src="/assets/img/posters/poster-05.jpg" alt="High score poster">
+    </div>
+  </div>
+</section>
+
+<section class="tapme-section">
+  <h2>One rule, many decisions.</h2>
+  <p>TapMe.plus keeps the surface simple so every move is about target choice, merge position, and whether the next drop can continue the chain.</p>
+  <div class="tapme-steps">
+    <article class="tapme-step"><span class="tapme-step__num">1</span><h3>Tap to raise</h3><p>Pick the tile that should become your merge target. The number increases by one immediately.</p></article>
+    <article class="tapme-step"><span class="tapme-step__num">2</span><h3>Merge connected matches</h3><p>Three or more equal numbers connected horizontally or vertically collapse into the target tile.</p></article>
+    <article class="tapme-step"><span class="tapme-step__num">3</span><h3>Plan the chain</h3><p>After a merge, tiles drop and refill. Strong moves leave the board ready for the next reaction.</p></article>
+  </div>
+</section>
+
+<section class="tapme-section tapme-split">
+  <div>
+    <p class="tapme-eyebrow">Play without loading it here</p>
+    <h2>Open the game only when you are ready to play.</h2>
+    <p>The homepage does not embed the game runtime anymore. Click Play to open the dedicated web game in a new page, where the browser can download the Godot WebAssembly package intentionally.</p>
+    <div class="tapme-actions">
+      <a class="tapme-button tapme-button--primary" href="https://web.tapme.plus" target="_blank" rel="noopener">Open Web Game</a>
+      <a class="tapme-button" href="/support/">Loading Help</a>
+    </div>
+  </div>
+  <div class="tapme-play-panel">
+    <img src="/assets/img/posters/poster-04.jpg" alt="TapMe.plus Rush mode App Store poster">
   </div>
 </section>
 
 <section class="tapme-section tapme-section--soft">
   <div class="tapme-section__inner tapme-grid">
     <article class="tapme-card">
-      <h2>One-tap rules</h2>
-      <p>Tap any tile to increase its number by one. When three or more equal numbers touch horizontally or vertically, they merge into the tapped target.</p>
+      <h2>Gameplay guide</h2>
+      <p>Learn target choice, chain reactions, and mode differences before chasing higher scores.</p>
+      <p><a href="/posts/tapme-plus-gameplay-guide/">Read the guide</a></p>
     </article>
     <article class="tapme-card">
-      <h2>Readable chains</h2>
-      <p>Every merge drops the board, refills the grid, and can trigger follow-up merges. The goal is to shape where the next upgrade lands.</p>
+      <h2>News</h2>
+      <p>Follow web, App Store, and product updates for TapMe.plus.</p>
+      <p><a href="/news/">Latest updates</a></p>
     </article>
     <article class="tapme-card">
-      <h2>Built for sessions</h2>
-      <p>Timed, Infinite, and Rush modes use the same core board while changing the pressure curve, scoring rhythm, and replay goal.</p>
+      <h2>Privacy first</h2>
+      <p>No TapMe.plus account is required for the first release. Optional leaderboard features use Apple Game Center.</p>
+      <p><a href="/privacy/">Privacy policy</a></p>
     </article>
   </div>
-</section>
-
-<section class="tapme-section">
-  <h2>How it plays</h2>
-  <p>TapMe.plus keeps the rule set compact so the board state stays readable even when the chain reactions become large.</p>
-  <div class="tapme-steps">
-    <div class="tapme-step"><div><h3>Tap to raise a tile</h3><p>Choose the tile that should become the merge target. The tapped number increases by one.</p></div></div>
-    <div class="tapme-step"><div><h3>Connect three or more</h3><p>Matching numbers connected up, down, left, or right merge into the target tile and upgrade.</p></div></div>
-    <div class="tapme-step"><div><h3>Use the drop</h3><p>After a merge, tiles fall and new tiles fill the board. Strong moves set up the next automatic chain.</p></div></div>
-  </div>
-</section>
-
-<section class="tapme-section tapme-screens">
-  <div>
-    <h2>iPhone first, iPad ready</h2>
-    <p>The layout is tuned for portrait play, safe areas, and repeated one-thumb sessions. On iPad, the board scales up while keeping controls calm and readable.</p>
-    <p><a href="/posts/tapme-plus-gameplay-guide/">Read the full gameplay introduction</a></p>
-  </div>
-  <img src="/assets/img/tapme-iphone.png" alt="TapMe.plus iPhone gameplay screenshot">
-</section>
-
-<section id="play-here" class="tapme-section tapme-section--soft">
-  <div class="tapme-section__inner">
-    <h2>Play in the browser</h2>
-    <p>Open the dedicated web build for the cleanest experience, or use the embedded frame below. The first launch downloads the Godot game package; later visits are usually cached by the browser.</p>
-    <div class="tapme-actions">
-      <a class="tapme-button tapme-button--primary" href="https://web.tapme.plus">Open Web Game</a>
-      <a class="tapme-button" href="/play/">Play Page</a>
-    </div>
-    <div class="tapme-game-frame">
-      <iframe src="https://web.tapme.plus" title="TapMe.plus web game" loading="lazy" allow="fullscreen"></iframe>
-    </div>
-  </div>
-</section>
-
-<section class="tapme-section tapme-grid">
-  <article class="tapme-card">
-    <h2>Latest news</h2>
-    {% assign latest_news = site.news | sort: "date" | reverse | first %}
-    {% if latest_news %}
-      <p><a href="{{ latest_news.url }}">{{ latest_news.title }}</a></p>
-      <p>{{ latest_news.excerpt | strip_html | truncatewords: 24 }}</p>
-    {% endif %}
-    <p><a href="/news/">All news</a></p>
-  </article>
-  <article class="tapme-card">
-    <h2>Development posts</h2>
-    {% assign latest_post = site.posts | first %}
-    {% if latest_post %}
-      <p><a href="{{ latest_post.url }}">{{ latest_post.title }}</a></p>
-      <p>{{ latest_post.excerpt | strip_html | truncatewords: 24 }}</p>
-    {% endif %}
-    <p><a href="/posts/">All posts</a></p>
-  </article>
-  <article class="tapme-card">
-    <h2>Privacy first</h2>
-    <p>The first release does not require a TapMe.plus account, does not show ads, and does not track users.</p>
-    <p><a href="/privacy/">Privacy policy</a></p>
-  </article>
-  <article class="tapme-card">
-    <h2>Support</h2>
-    <p>Questions, press, review, and support requests can be sent to the TapMe.plus contact mailbox.</p>
-    <p><a href="mailto:support@tapme.plus">support@tapme.plus</a></p>
-  </article>
 </section>
