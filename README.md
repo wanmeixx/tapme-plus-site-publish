@@ -16,7 +16,7 @@ Related project:
 Cloudflare Pages settings:
 
 - Framework preset: Jekyll
-- Build command: `bundle install && bundle exec jekyll build`
+- Build command: `bundle exec jekyll build`
 - Build output directory: `_site`
 - Cloudflare builds `_site` from the Beautiful Jekyll source. The generated `_site` directory is not committed.
 
