@@ -18,10 +18,12 @@ Cloudflare Pages settings:
 - Framework preset: Jekyll
 - Build command: `bundle install && bundle exec jekyll build`
 - Build output directory: `_site`
+- Cloudflare builds `_site` from the Beautiful Jekyll source. The generated `_site` directory is not committed.
 
 This site is based on Beautiful Jekyll and includes:
 
-- Homepage with direct play links and an embedded web game frame
-- Blog posts under `_posts`
+- Lightweight homepage with direct play links
+- Blog posts under `_posts`, rendered through Beautiful Jekyll's post and home layouts
 - News items under `_news`
+- Automatic `/sitemap.xml` from `jekyll-sitemap`
 - Privacy policy at `/privacy/`
