@@ -18,7 +18,6 @@ round-avatar: false
 social-network-links:
   email: "support@tapme.plus"
   rss: true
-  github: wanmeixx
 
 share-links-active:
   twitter: true
