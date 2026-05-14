@@ -1,0 +1,84 @@
+---
+layout: page
+title: TapMe.plus
+subtitle: Tap +1. Merge connected numbers. Chain the board.
+full-width: true
+---
+
+<section class="tapme-hero">
+  <div class="tapme-hero__copy">
+    <img class="tapme-hero__icon" src="/assets/img/tapme-icon.png" alt="TapMe.plus app icon">
+    <h1>TapMe.plus</h1>
+    <p class="lead">A fast number merge puzzle built around one simple move: tap a tile to add 1, connect three or more matching numbers, and watch the board chain upward.</p>
+    <div class="tapme-actions">
+      <a class="tapme-button tapme-button--primary" href="https://web.tapme.plus">Play Web Version</a>
+      <a class="tapme-button" href="#play-here">Play on this page</a>
+    </div>
+    <p class="tapme-note">The web version downloads the Godot game package on first launch. Later visits are cached by the browser.</p>
+  </div>
+  <div class="tapme-hero__media">
+    <img src="/assets/img/tapme-iphone.png" alt="TapMe.plus iPhone gameplay screenshot">
+  </div>
+</section>
+
+<section class="tapme-section tapme-grid">
+  <article>
+    <h2>One-tap puzzle flow</h2>
+    <p>Each tap increases a number by one. If three or more equal numbers connect horizontally or vertically, they merge into the target tile and upgrade.</p>
+  </article>
+  <article>
+    <h2>Chain reactions</h2>
+    <p>Merges drop the board, refill tiles, and can trigger more merges. The best runs come from planning where the next chain should land.</p>
+  </article>
+  <article>
+    <h2>Three modes</h2>
+    <p>Timed, Infinite, and Rush modes keep the same clean core rule while changing pressure, scoring rhythm, and session length.</p>
+  </article>
+</section>
+
+<section id="play-here" class="tapme-section">
+  <h2>Play TapMe.plus here</h2>
+  <p>Use the embedded web build below, or open the full-screen version at <a href="https://web.tapme.plus">web.tapme.plus</a>.</p>
+  <div class="tapme-game-frame">
+    <iframe src="https://web.tapme.plus" title="TapMe.plus web game" loading="lazy" allow="fullscreen"></iframe>
+  </div>
+</section>
+
+<section class="tapme-section tapme-screens">
+  <div>
+    <h2>Designed for portrait play</h2>
+    <p>TapMe.plus is tuned first for iPhone portrait sessions, with an iPad layout that keeps the board readable and comfortably centered.</p>
+  </div>
+  <img src="/assets/img/tapme-ipad.png" alt="TapMe.plus iPad gameplay screenshot">
+</section>
+
+<section class="tapme-section tapme-grid">
+  <article>
+    <h2>Latest news</h2>
+    {% assign latest_news = site.news | sort: "date" | reverse | first %}
+    {% if latest_news %}
+      <p><a href="{{ latest_news.url }}">{{ latest_news.title }}</a></p>
+      <p>{{ latest_news.excerpt | strip_html | truncatewords: 24 }}</p>
+    {% endif %}
+    <p><a href="/news/">All news</a></p>
+  </article>
+  <article>
+    <h2>Development posts</h2>
+    {% assign latest_post = site.posts | first %}
+    {% if latest_post %}
+      <p><a href="{{ latest_post.url }}">{{ latest_post.title }}</a></p>
+      <p>{{ latest_post.excerpt | strip_html | truncatewords: 24 }}</p>
+    {% endif %}
+    <p><a href="/posts/">All posts</a></p>
+  </article>
+  <article>
+    <h2>Privacy first</h2>
+    <p>The first release does not require a TapMe.plus account, does not show ads, and does not track users.</p>
+    <p><a href="/privacy/">Privacy policy</a></p>
+  </article>
+  <article>
+    <h2>Support</h2>
+    <p>Questions, press, review, and support requests can be sent to the TapMe.plus contact mailbox.</p>
+    <p><a href="mailto:support@tapme.plus">support@tapme.plus</a></p>
+  </article>
+</section>

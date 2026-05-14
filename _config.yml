@@ -1,0 +1,96 @@
+title: TapMe.plus
+author: TapMe.plus
+description: TapMe.plus is a quick tap-to-merge number puzzle for iPhone, iPad, and the web.
+url: "https://www.tapme.plus"
+baseurl: ""
+url-pretty: "tapme.plus"
+title-on-all-pages: true
+rss-description: TapMe.plus updates, release notes, and puzzle design posts.
+
+navbar-links:
+  Play: "play"
+  News: "news"
+  Posts: "posts"
+  Privacy: "privacy"
+
+avatar: "/assets/img/tapme-icon.png"
+round-avatar: false
+
+social-network-links:
+  email: "support@tapme.plus"
+  rss: true
+  github: wanmeixx
+
+share-links-active:
+  twitter: true
+  facebook: false
+  linkedin: false
+  vk: false
+  reddit: false
+
+keywords: "TapMe.plus, TapMe, number puzzle, merge puzzle, casual puzzle game, web game, iOS puzzle game"
+date_format: "%B %-d, %Y"
+excerpt_length: 45
+feed_show_excerpt: true
+feed_show_tags: true
+post_search: true
+edit_page_button: false
+remove-ads: true
+
+page-col: "#FFFFFF"
+text-col: "#243044"
+link-col: "#1B6EF3"
+hover-col: "#0F4EBD"
+navbar-col: "#FFFFFF"
+navbar-text-col: "#243044"
+navbar-border-col: "#DCE4F2"
+footer-col: "#F5F8FD"
+footer-text-col: "#667085"
+footer-link-col: "#243044"
+footer-hover-col: "#1B6EF3"
+mobile-theme-col: "#1B6EF3"
+
+site-css:
+  - "/assets/css/tapme.css"
+
+collections:
+  news:
+    output: true
+    permalink: /news/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: TapMe.plus
+      tags:
+        - TapMe.plus
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: post
+      author: TapMe.plus
+      tags:
+        - news
+
+paginate: 5
+paginate_path: "/posts/page:num/"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+include:
+  - _headers
+  - _redirects
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - beautiful-jekyll-theme.gemspec
+  - README.md
+  - LICENSE
+  - vendor
