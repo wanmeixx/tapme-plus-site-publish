@@ -1,0 +1,141 @@
+.tapme-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+  gap: 42px;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 34px 22px 16px;
+}
+
+.tapme-hero__icon {
+  width: 78px;
+  height: 78px;
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(29, 78, 216, 0.18);
+}
+
+.tapme-hero h1 {
+  margin: 20px 0 12px;
+  font-size: 56px;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.tapme-hero .lead {
+  max-width: 690px;
+  font-size: 21px;
+  line-height: 1.55;
+  color: #4a5870;
+}
+
+.tapme-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 12px;
+}
+
+.tapme-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid #b8c7dc;
+  border-radius: 8px;
+  color: #1b4f94;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tapme-button:hover {
+  text-decoration: none;
+}
+
+.tapme-button--primary {
+  border-color: #1b6ef3;
+  background: #1b6ef3;
+  color: #fff;
+}
+
+.tapme-note {
+  max-width: 680px;
+  color: #667085;
+  font-size: 14px;
+}
+
+.tapme-hero__media img,
+.tapme-screens img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 22px 60px rgba(22, 34, 51, 0.18);
+}
+
+.tapme-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 44px 22px;
+}
+
+.tapme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.tapme-grid article {
+  border: 1px solid #dde7f4;
+  border-radius: 8px;
+  padding: 22px;
+  background: #fff;
+}
+
+.tapme-grid h2,
+.tapme-section h2 {
+  margin-top: 0;
+}
+
+.tapme-game-frame {
+  width: min(430px, 100%);
+  aspect-ratio: 390 / 844;
+  margin: 22px auto 0;
+  border: 1px solid #cfd9e8;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #101828;
+}
+
+.tapme-game-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.tapme-screens {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+  gap: 34px;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .tapme-hero,
+  .tapme-screens,
+  .tapme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tapme-hero {
+    padding-top: 18px;
+  }
+
+  .tapme-hero h1 {
+    font-size: 42px;
+  }
+
+  .tapme-hero .lead {
+    font-size: 18px;
+  }
+}
