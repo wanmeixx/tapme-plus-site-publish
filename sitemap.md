@@ -10,7 +10,7 @@ permalink: /sitemap/
 <ul class="tapme-link-list">
   <li><a href="/">Home</a></li>
   <li><a href="/play/">Play TapMe.plus</a></li>
-  <li><a href="https://web.tapme.plus">Web Game</a></li>
+  <li><a href="https://web.tapme.plus" target="_blank" rel="noopener">Web Game</a></li>
   <li><a href="/news/">News</a></li>
   <li><a href="/posts/">Posts</a></li>
   <li><a href="/posts/tapme-plus-gameplay-guide/">Gameplay Guide</a></li>

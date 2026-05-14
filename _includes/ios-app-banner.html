@@ -1,12 +1,12 @@
 <div class="tapme-ios-app-banner" id="tapme-ios-app-banner" role="region" aria-label="TapMe.plus App Store download">
-  <a class="tapme-ios-app-banner__icon" href="https://apps.apple.com/app/id6769129049" aria-label="Open TapMe.plus on the App Store">
+  <a class="tapme-ios-app-banner__icon" href="https://apps.apple.com/app/id6769129049" target="_blank" rel="noopener" aria-label="Open TapMe.plus on the App Store">
     <img src="{{ '/assets/img/tapme-icon.png' | relative_url }}" alt="">
   </a>
   <div class="tapme-ios-app-banner__copy">
     <strong>TapMe.plus</strong>
     <span>Tap +1. Merge connected numbers. Chain the board.</span>
   </div>
-  <a class="tapme-ios-app-banner__button" href="https://apps.apple.com/app/id6769129049">View</a>
+  <a class="tapme-ios-app-banner__button" href="https://apps.apple.com/app/id6769129049" target="_blank" rel="noopener">View</a>
   <button class="tapme-ios-app-banner__close" type="button" aria-label="Dismiss App Store banner">x</button>
 </div>
 <script>
@@ -14,10 +14,9 @@
   var ua = navigator.userAgent || "";
   var platform = navigator.platform || "";
   var isIOS = /iPad|iPhone|iPod/.test(ua) || (platform === "MacIntel" && navigator.maxTouchPoints > 1);
-  var isSafari = /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo/.test(ua);
-  if (!isIOS || isSafari) return;
+  if (!isIOS) return;
   try {
-    if (localStorage.getItem("tapme-ios-app-banner-dismissed") === "1") return;
+    if (sessionStorage.getItem("tapme-ios-app-banner-dismissed") === "1") return;
   } catch (e) {}
   document.documentElement.classList.add("tapme-show-ios-app-banner");
   var banner = document.getElementById("tapme-ios-app-banner");
@@ -26,7 +25,7 @@
   if (close) {
     close.addEventListener("click", function () {
       document.documentElement.classList.remove("tapme-show-ios-app-banner");
-      try { localStorage.setItem("tapme-ios-app-banner-dismissed", "1"); } catch (e) {}
+      try { sessionStorage.setItem("tapme-ios-app-banner-dismissed", "1"); } catch (e) {}
     });
   }
 }());
