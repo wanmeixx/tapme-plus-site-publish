@@ -1,6 +1,7 @@
 ---
 title: TapMe.plus Web Version Is Now Playable
 subtitle: The number merge puzzle can now run directly in a browser.
+permalink: /posts/tapme-plus-web-version/
 tags:
   - web
   - release

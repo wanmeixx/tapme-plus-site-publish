@@ -8,11 +8,9 @@ title-on-all-pages: true
 rss-description: TapMe.plus updates, release notes, and puzzle design posts.
 
 navbar-links:
-  Play: "play"
-  News: "news"
+  Play: "https://web.tapme.plus"
+  App Store: "https://apps.apple.com/app/id6769129049"
   Posts: "posts"
-  Support: "support"
-  Privacy: "privacy"
 
 avatar: "/assets/img/tapme-icon.png"
 round-avatar: false

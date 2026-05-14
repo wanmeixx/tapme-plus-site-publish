@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6769129049, app-argument=https://tapme.plus/">
+  <link rel="apple-touch-icon" href="/assets/img/tapme-icon.png">
+  <title>Playing TapMe.plus in the Browser</title>
+  <meta name="description" content="The web version is for quick access, while the homepage stays lightweight.">
+  <link rel="canonical" href="https://www.tapme.plus/posts/browser-puzzle-game/">
+  <link rel="stylesheet" href="/assets/css/tapme.css">
+</head>
+<body>
+  <main class="tapme-section">
+    <h1>Playing TapMe.plus in the Browser</h1>
+    <p class="tapme-meta">The web version is for quick access, while the homepage stays lightweight.</p>
+    <p>TapMe.plus can run in the browser, which makes it easy to try the game without installing anything first.</p>
+    <p>The official site stays lightweight. It does not embed the game on the homepage anymore, because loading a Godot WebAssembly build should be an intentional action. When you click Play, the dedicated web game opens and downloads the runtime and game package there.</p>
+    <h2>Why the first load can take longer</h2>
+    <p>A browser game made with Godot is not the same as a normal article page. The first launch needs the game runtime, data package, and supporting files. That can take a little time, especially on mobile networks.</p>
+    <p>After that, the browser can cache the files. Later visits are usually faster.</p>
+    <h2>Good for trying the core loop</h2>
+    <p>The web version is a good way to feel the TapMe.plus rule quickly:</p>
+    <ul>
+      <li>tap a tile to add 1;</li>
+      <li>connect three or more matching numbers;</li>
+      <li>watch the board drop;</li>
+      <li>chase the next chain.</li>
+    </ul>
+    <p>If the game clicks with you in the browser, the same core logic carries over to iPhone and iPad.</p>
+    <h2>A practical note</h2>
+    <p>If the web game stalls, try a modern browser such as Safari, Chrome, Edge, or Firefox, and make sure your network is not blocking large WebAssembly files.</p>
+    <p>The game is simple to play, but the web build is still a real game package.</p>
+  </main>
+  <footer class="tapme-section">
+    <div class="tapme-footer-links">
+      <a href="/news/">News</a>
+      <a href="/posts/">Posts</a>
+      <a href="https://apps.apple.com/app/id6769129049">App Store</a>
+      <a href="https://web.tapme.plus">Web Game</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/terms/">Terms of Use</a>
+      <a href="/support/">Technical Support</a>
+      <a href="/sitemap/">Site Map</a>
+      <a href="mailto:support@tapme.plus">support@tapme.plus</a>
+    </div>
+  </footer>
+</body>
+</html>
